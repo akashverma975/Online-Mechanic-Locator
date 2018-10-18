@@ -1,158 +1,151 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Online Mechanic Finder</title>
-    <style>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Online Mechanic Finder</title>
+     <style>
      @import url('https://fonts.googleapis.com/css?family=Raleway:200,100,400');
 
-body {
-  font-family: 'Raleway', sans-serif;
-  height: 100vh;
-  background: #333 url('https://image.ibb.co/n5A2HU/showcase.jpg') no-repeat center center / cover;
-  color: #ccc;
-  overflow:hidden;
-}
+      body {
+        font-family: 'Raleway', sans-serif;
+        height: 100vh;
+        background: #333 url('https://image.ibb.co/n5A2HU/showcase.jpg') no-repeat center center / cover;
+        color: #ccc;
+        overflow:hidden;
+      }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  padding: 0 3rem;
-}
+      .container {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         height: 100%;
+         padding: 0 3rem;
+      }
 
-h1, h2 {
-  font-weight: 200;
-  margin: 0.4rem;
-}
+      h1, h2 {
+        font-weight: 200;
+        margin: 0.4rem;
+      }
 
-h1 {
-  font-size: 3.5rem;
-}
+      h1 {
+        font-size: 3.5rem;
+      }
 
-h2 {
-  font-size: 2rem;
-  color: #aaa;
-}
+      h2 {
+        font-size: 2rem;
+        color: #aaa;
+      }
 
-/* Cursor */
-.txt-type > .txt {
-  border-right: 0.2rem solid #777;
-}
+      /* Cursor */
+      .txt-type > .txt {
+         border-right: 0.2rem solid #777;
+      }
 
-@media(min-width: 1200px) {
-  h1 {
-    font-size: 5rem;
-  }
-}
+      @media(min-width: 1200px) {
+       h1 {
+          font-size: 5rem;
+        }
+      }
 
-@media(max-width: 800px) {
-  .container {
-    padding: 0 1rem;
-  }
+      @media(max-width: 800px) {
+      .container {
+          padding: 0 1rem;
+        }
 
-  h1 {
-    font-size: 3rem;
-  }
-}
+       h1 {
+          font-size: 3rem;
+        }
+      }
 
-@media(max-width: 500px) {
-  h1 {
-    font-size: 2.5rem;
-  }
+      @media(max-width: 500px) {
+       h1 {
+          font-size: 2.5rem;
+        }
 
-  h2 {
-    font-size: 1.5rem;
-  }
-}
+       h2 {
+          font-size: 1.5rem;
+        }
+      }
     </style>
   </head>
   <body>
-   <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css">
-  <title>Welcome To My Site</title>
-</head>
-<body>
   <div class="container">
-    <h1>Brad Traversy The 
-      <span class="txt-type" data-wait="3000" data-words='["Developer", "Designer", "Creator"]'></span>
+    <h1>Online 
+      <span class="txt-type" data-wait="3000" data-words='["Mechanic", "Garage"]'></span>
+      Locator
     </h1>
-    <h2>Welcome To My Website</h2>
+    <h2>Third Year Project</h2>
   </div>
   
   <script>
-    class TypeWriter {
-  constructor(txtElement, words, wait = 3000) {
-    this.txtElement = txtElement;
-    this.words = words;
-    this.txt = '';
-    this.wordIndex = 0;
-    this.wait = parseInt(wait, 10);
-    this.type();
-    this.isDeleting = false;
-  }
+            class TypeWriter {
+        constructor(txtElement, words, wait = 3000) {
+        this.txtElement = txtElement;
+        this.words = words;
+        this.txt = '';
+        this.wordIndex = 0;
+        this.wait = parseInt(wait, 10);
+        this.type();
+        this.isDeleting = false;
+      }
 
-  type() {
-    // Current index of word
-    const current = this.wordIndex % this.words.length;
-    // Get full text of current word
-    const fullTxt = this.words[current];
+      type() {
+        // Current index of word
+        const current = this.wordIndex % this.words.length;
+        // Get full text of current word
+        const fullTxt = this.words[current];
 
-    // Check if deleting
-    if(this.isDeleting) {
-      // Remove char
-      this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
-      // Add char
-      this.txt = fullTxt.substring(0, this.txt.length + 1);
+        // Check if deleting
+        if(this.isDeleting) {
+          // Remove char
+          this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+          // Add char
+          this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        // Insert txt into element
+        this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+
+        // Initial Type Speed
+        let typeSpeed = 300;
+
+        if(this.isDeleting) {
+          typeSpeed /= 2;
+        }
+
+        // If word is complete
+        if(!this.isDeleting && this.txt === fullTxt) {
+          // Make pause at end
+          typeSpeed = this.wait;
+          // Set delete to true
+          this.isDeleting = true;
+        } else if(this.isDeleting && this.txt === '') {
+          this.isDeleting = false;
+          // Move to next word
+          this.wordIndex++;
+          // Pause before start typing
+          typeSpeed = 500;
+        }
+
+        setTimeout(() => this.type(), typeSpeed);
+      }
     }
 
-    // Insert txt into element
-    this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
 
-    // Initial Type Speed
-    let typeSpeed = 300;
+    // Init On DOM Load
+    document.addEventListener('DOMContentLoaded', init);
 
-    if(this.isDeleting) {
-      typeSpeed /= 2;
+    // Init App
+    function init() {
+      const txtElement = document.querySelector('.txt-type');
+      const words = JSON.parse(txtElement.getAttribute('data-words'));
+      const wait = txtElement.getAttribute('data-wait');
+      // Init TypeWriter
+      new TypeWriter(txtElement, words, wait);
     }
-
-    // If word is complete
-    if(!this.isDeleting && this.txt === fullTxt) {
-      // Make pause at end
-      typeSpeed = this.wait;
-      // Set delete to true
-      this.isDeleting = true;
-    } else if(this.isDeleting && this.txt === '') {
-      this.isDeleting = false;
-      // Move to next word
-      this.wordIndex++;
-      // Pause before start typing
-      typeSpeed = 500;
-    }
-
-    setTimeout(() => this.type(), typeSpeed);
-  }
-}
-
-
-// Init On DOM Load
-document.addEventListener('DOMContentLoaded', init);
-
-// Init App
-function init() {
-  const txtElement = document.querySelector('.txt-type');
-  const words = JSON.parse(txtElement.getAttribute('data-words'));
-  const wait = txtElement.getAttribute('data-wait');
-  // Init TypeWriter
-  new TypeWriter(txtElement, words, wait);
-}
-  </script>
-</body>
-</html>
-  </body>
-</html>
+    </script>
+ </html>
+  
