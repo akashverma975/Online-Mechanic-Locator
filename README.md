@@ -5,3 +5,7 @@ Chapter 1 - https://docs.google.com/document/d/1l0vjIsgVoaNFvag0M4jeoBKtx-0gDE7O
 
 Chapter 2 - https://docs.google.com/document/d/1n0NgNLkdopNZUxWGa-XUGjGg9PUuM0SiYD0B9bkoBaI/edit?usp=sharing
 
+Chapter 3 - https://docs.google.com/document/d/1Y2kx2FiFXqDHKTj0zySrSf7NBnvn20WxVvQSt9X2Pjc/edit?usp=sharing
+
+
+
