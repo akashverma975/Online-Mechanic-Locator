@@ -2,9 +2,9 @@
 
 ## TY Project by Akash Verma. ##
 
-Follow me on 
-<!-- display the social media buttons in your README -->
 
+<!-- display the social media buttons in your README -->
+Follow me on 
 [![alt text][1.1]][1]
 [![alt text][2.1]][2]
 
