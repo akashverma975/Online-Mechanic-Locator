@@ -6,7 +6,7 @@ Follow me on
 <!-- display the social media buttons in your README -->
 
 [![alt text][1.1]][1]
-[![alt text][6.1]][6]
+[![alt text][2.1]][2]
 
 
 <!-- links to social media icons -->
