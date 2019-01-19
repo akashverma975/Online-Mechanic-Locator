@@ -1,4 +1,0 @@
-email uniqueness for users are not checked by Django by-default. 
-So if two user have same email and suppose one user is requesting the pasword reset through its email id,
-then the reset token is also sent to other user with the same email id.
-Some logic must be implemented or simply email field should be set to is_unique in User Model. 

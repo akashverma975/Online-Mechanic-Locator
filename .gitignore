@@ -1,6 +1,3 @@
-#Folders to ignore while tracking code changes
-Environments/
-Templates/
-
-#Ignore files ending with .pyc extension. Python compiles the .py files and saves it as .pyc files
 *.pyc
+django_env/
+
