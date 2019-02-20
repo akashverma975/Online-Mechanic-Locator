@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+OML - Home
+{% endblock %}
+
+{%block content%}
+<h2>Home Page</h2>
+
+<p>Welcome to Online Mechanic Locator, {% if user.is_authenticated %}<strong>{{ user.username|title }}</strong>{% else %}<strong>Visitor!</strong>{% endif %}</p>
+
+<p>Number of Registered User: {{count}}</p>
+{%endblock%}
