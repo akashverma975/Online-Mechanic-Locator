@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated and user.is_owner%}
+	Hi {{ user.username }}, you're owner!
+	<p><a href="{% url 'logout' %}">logout</a></p>
+	
+{% elif user.is_authenticated and user.is_mechanic %}
+	 Hi {{ user.username }}, you're mechanic!
+	<p><a href="{% url 'logout' %}">logout</a></p>
+{% elif user.is_authenticated and user.is_garage %}
+	Hi {{ user.username }}, you're garage!
+	<p><a href="{% url 'logout' %}">logout</a></p>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">Login</a> |
+  <a href="{% url 'signup' %}">Signup</a>
+{% endif %}
+{% endblock %}

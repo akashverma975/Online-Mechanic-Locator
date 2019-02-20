@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<p>
+	<a href="{% url 'owner_signup' %}">Signup as Owner</a> |
+	<a href="{% url 'mechanic_signup' %}">Signup as Mechanic</a> |
+	<a href="{% url 'garage_signup' %}">Signup as Garage</a>
+</p>
+	
+{% endblock %}
