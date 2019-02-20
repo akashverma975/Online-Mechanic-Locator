@@ -16,7 +16,7 @@ Chapter 3 - https://docs.google.com/document/d/1Y2kx2FiFXqDHKTj0zySrSf7NBnvn20Wx
 Chapter 4 - https://docs.google.com/document/d/198WyLN42KShP_XFUVctJpNC39JNFb5kFiQNnHkq7Y9E/edit?usp=sharing
 
 
-## Follow the Steps given below to setup the project on your local machine.
+### Follow the Steps given below to setup the project on your local machine.
 
 1.  Make sure python 3.7 or higher version is installed on your computer.
 2.  Clone this repository on your PC using command prompt. **`git clone https://github.com/akashverma975/Online-Mechanic-Locator.git`**
