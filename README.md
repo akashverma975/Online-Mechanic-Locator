@@ -24,6 +24,7 @@ Chapter 4 - https://docs.google.com/document/d/198WyLN42KShP_XFUVctJpNC39JNFb5kF
 4.  Create Virtual Environment. Make sure `virtualenv` package is installed on your PC. **`virtualenv [_virtual_environment_name_]`**
 5.  Activate Virtual Environment by typing **`[_virtual_environment_name_]\Scripts\activate`** on your command prompt
 6.  Now install all project dependencies from requirements.txt **`pip install -r requirements.txt`**
+8.  Override **`.env.example`** with appropriate values and rename it to **`.env`**
 7.  Congratulations you've done the project setup. Now run the Project **`python manage.py runserver`**
 
 
