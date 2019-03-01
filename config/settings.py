@@ -30,19 +30,22 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 
 # Application definition
-
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+]
+THIRD_PARTY = []
+LOCAL_APPS = [
     'onlinemechaniclocator.accounts',  # app for Custom User Model and handling Multiple User Authentication
     'onlinemechaniclocator.owners',  # owner app
     'onlinemechaniclocator.mechanics',  # mechanic app
     'onlinemechaniclocator.garages',  # garage  app
 ]
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY + LOCAL_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -85,7 +88,7 @@ DATABASES = {
         'USER': config('DB_USER'),
         'PASSWORD': config('DB_PASSWORD'),
         'HOST': config('DB_HOST'),
-        'PORT': config('DB_PORT'),
+        'PORT': '',
     }
 }
 
