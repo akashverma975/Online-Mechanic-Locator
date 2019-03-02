@@ -1,4 +1,5 @@
 # Online Mechanic Locator 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2561cd85d8954b7db6f66dc8f981e1e6)](https://app.codacy.com/app/akashverma975/Online-Mechanic-Locator?utm_source=github.com&utm_medium=referral&utm_content=akashverma975/Online-Mechanic-Locator&utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/akashverma975/online-mechanic-locator/badge)](https://www.codefactor.io/repository/github/akashverma975/online-mechanic-locator)
 [![Python Version](https://img.shields.io/badge/python-3.7-brightgreen.svg)](https://python.org)
 [![Django Version](https://img.shields.io/badge/django-2.1-brightgreen.svg)](https://djangoproject.com)
