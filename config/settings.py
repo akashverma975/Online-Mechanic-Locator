@@ -1,3 +1,4 @@
+# v0.3.0
 """
 Django settings for online_mechanic_locator project.
 
