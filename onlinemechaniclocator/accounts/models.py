@@ -7,5 +7,8 @@ class User(AbstractUser):
     is_mechanic = models.BooleanField(default=False)
     is_garage = models.BooleanField(default=False)
 
+    class Meta:
+    	db_table = 'user'
+
     def __str__(self):
         return self.email

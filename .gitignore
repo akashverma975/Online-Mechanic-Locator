@@ -1,4 +1,8 @@
 #https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore
+
+# Custom GitIgnore
+sendgrid_smtp_relay.txt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
