@@ -28,7 +28,7 @@ cd Online-Mechanic-Locator
 ```
 4.  Create Virtual Environment. Make sure **`virtualenv`** package is installed on your PC(Windows):
 ```bash
-virtualenv [*virtual_environment_name*]
+virtualenv [virtual_environment_name]
 ```
 5.  Activate Virtual Environment by typing:
 ```bash
@@ -48,4 +48,5 @@ python manage.py runserver
 
 
 
-#### Third Year Project by Akash Verma [![Akash's Twitter](https://img.shields.io/twitter/follow/akashvermapro.svg?label=Follow&style=social)](http://www.twitter.com/akashvermapro) [![Akash's Github](https://img.shields.io/github/followers/akashverma975.svg?label=Follow&style=social)](https://github.com/akashverma975)
+#### Third Year Project by Akash Verma 
+[![Akash's Twitter](https://img.shields.io/twitter/follow/akashvermapro.svg?label=Follow&style=social)](http://www.twitter.com/akashvermapro)[![Akash's Github](https://img.shields.io/github/followers/akashverma975.svg?label=Follow&style=social)]https://github.com/akashverma975)
