@@ -1,3 +1,4 @@
+# v0.1.0
 """
 Django settings for online_mechanic_locator project.
 
@@ -127,8 +128,9 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-EMAIL_HOST='localhost'
+EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1025
-#For debugging purposes you could setup 
-#a local smtpserver with this command:
-#python -m smtpd -n -c DebuggingServer localhost:1025
+
+# For debugging purposes you could setup
+# a local smtpserver with this command:
+# python -m smtpd -n -c DebuggingServer localhost:1025
