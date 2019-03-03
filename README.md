@@ -34,7 +34,6 @@ Now **`migrate`** and **`run`** the Project by typing the following in the comma
 python manage.py migrate
 python manage.py runserver
 ```
-
 ## Project Documentation on Google Docs
 
 Abstract - https://docs.google.com/document/d/15q6ni0XfJC8W280yvM3gqjdmXc8whTw-1gG6V-q9eDo/edit?usp=sharing
