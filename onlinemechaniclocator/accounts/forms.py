@@ -7,7 +7,7 @@ class OwnerSignUpForm(UserCreationForm):
         model = User
         fields = ('username', 'email')
 
-    def save(self):
+    def save(self, commit=True):
         user = super().save(commit=False)
         user.is_owner = True
         user.save()
@@ -19,7 +19,7 @@ class MechanicSignUpForm(UserCreationForm):
         model = User
         fields = ('username', 'email')
 
-    def save(self):
+    def save(self, commit=True):
         user = super().save(commit=False)
         user.is_mechanic = True
         user.save()
@@ -31,7 +31,7 @@ class GarageSignUpForm(UserCreationForm):
         model = User
         fields = ('username', 'email')
 
-    def save(self):
+    def save(self, commit=True):
         user = super().save(commit=False)
         user.is_garage = True
         user.save()
