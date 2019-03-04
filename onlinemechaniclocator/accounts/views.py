@@ -1,5 +1,6 @@
 from django.views.generic import CreateView
 from django.urls import reverse_lazy
+from allauth.account.views import PasswordChangeView
 from .models import User
 from .forms import OwnerSignUpForm, MechanicSignUpForm, GarageSignUpForm
 
@@ -8,7 +9,7 @@ class OwnerSignUpView(CreateView):
     model = User
     form_class = OwnerSignUpForm
     template_name = 'owners/owner_signup.html'
-    success_url = reverse_lazy('login')
+    success_url = reverse_lazy('account_login')
 
     def get_context_data(self, **kwargs):
         kwargs['user_type'] = 'owner'
@@ -19,7 +20,7 @@ class MechanicSignUpView(CreateView):
     model = User
     form_class = MechanicSignUpForm
     template_name = 'mechanics/mechanic_signup.html'
-    success_url = reverse_lazy('login')
+    success_url = reverse_lazy('account_login')
 
     def get_context_data(self, **kwargs):
         kwargs['user_type'] = 'mechanic'
@@ -30,8 +31,14 @@ class GarageSignUpView(CreateView):
     model = User
     form_class = GarageSignUpForm
     template_name = 'garages/garage_signup.html'
-    success_url = reverse_lazy('login')
+    success_url = reverse_lazy('account_login')
 
     def get_context_data(self, **kwargs):
         kwargs['user_type'] = 'garage'
         return super().get_context_data(**kwargs)
+
+
+class LoginAfterPasswordChange(PasswordChangeView):
+    @property
+    def success_url(self):
+        return reverse_lazy('account_login')

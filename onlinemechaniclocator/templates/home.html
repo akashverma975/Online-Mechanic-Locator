@@ -1,24 +1,28 @@
 {% extends 'base.html' %}
 
+{% load socialaccount %}
+{% providers_media_js %}
+
 {% block title %}Home{% endblock %}
 
 {% block content %}
-{% if user.is_authenticated and user.is_owner%}
-	Hi {{ user.username }}, you're owner!
-	<p><a href="{% url 'logout' %}">Logout</a> | <a href="{% url 'password_change' %}">Change Password</a></p>
-	
-{% elif user.is_authenticated and user.is_mechanic %}
-	 Hi {{ user.username }}, you're mechanic!
-	<p><a href="{% url 'logout' %}">Logout</a> | <a href="{% url 'password_change' %}">Change Password</a></p>
-{% elif user.is_authenticated and user.is_garage %}
-	Hi {{ user.username }}, you're garage!
-	<p><a href="{% url 'logout' %}">Logout</a> | <a href="{% url 'password_change' %}">Change Password</a></p>
-{% elif user.is_authenticated and user.is_superuser %}
-	Hi {{ user.username }}, you're superuser!
-	<p><a href="{% url 'logout' %}">Logout</a> | <a href="{% url 'password_change' %}">Change Password</a></p>
-{% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">Login</a> |
-  <a href="{% url 'signup' %}">Signup</a>
-{% endif %}
+	{%if user.is_authenticated%}
+		<p><a href="{% url 'account_logout' %}">Logout</a> | <a href="{% url 'account_change_password' %}">Change Password</a></p>
+		<hr>
+		Last Login :         {{user.last_login}} <br>
+		Is Superuser :       {{user.is_superuser}}<br>
+		Username:       {{user.username}}<br>
+		Name:      {{user.first_name}} {{user.last_name}}<br>
+		Email:      {{user.email}}<br>
+		Is Staff:     {{user.is_staff}}<br>
+		Is Active:      {{user.is_active}}<br>
+		Date Joined:    {{user.date_joined}}<br>
+		Is Owner :      {{user.is_owner}}<br>
+		Is Mechanic :       {{user.is_mechanic}}<br>
+		Is Garage :      {{user.is_garage}}<br>
+	{%else%}
+		 <a href="{% url 'account_login' %}">Login</a> |
+		 <a href="{% url 'account_signup' %}">Signup</a>
+	{%endif%}
+
 {% endblock %}
