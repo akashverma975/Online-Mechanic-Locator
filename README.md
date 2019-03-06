@@ -3,6 +3,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/akashverma975/online-mechanic-locator/badge)](https://www.codefactor.io/repository/github/akashverma975/online-mechanic-locator)
 [![Python Version](https://img.shields.io/badge/python-3.7-brightgreen.svg)](https://python.org)
 [![Django Version](https://img.shields.io/badge/django-2.1-brightgreen.svg)](https://djangoproject.com)
+[![PEP8](https://img.shields.io/badge/code%20style-pep8-brightgreen.svg)](https://www.python.org/dev/peps/pep-0008/)
 
 ## Follow the Steps given below to setup the project on your local machine
 1.  Make sure python 3.7 or higher version and PostgreSQL11 is installed on your computer.

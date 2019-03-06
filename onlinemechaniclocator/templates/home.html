@@ -9,20 +9,26 @@
 	{%if user.is_authenticated%}
 		<p><a href="{% url 'account_logout' %}">Logout</a> | <a href="{% url 'account_change_password' %}">Change Password</a></p>
 		<hr>
-		Last Login :         {{user.last_login}} <br>
-		Is Superuser :       {{user.is_superuser}}<br>
-		Username:       {{user.username}}<br>
-		Name:      {{user.first_name}} {{user.last_name}}<br>
-		Email:      {{user.email}}<br>
-		Is Staff:     {{user.is_staff}}<br>
-		Is Active:      {{user.is_active}}<br>
-		Date Joined:    {{user.date_joined}}<br>
-		Is Owner :      {{user.is_owner}}<br>
-		Is Mechanic :       {{user.is_mechanic}}<br>
-		Is Garage :      {{user.is_garage}}<br>
-	{%else%}
+		Username : {{user.username}}<br>
+		Password : {{user.password}}<br>
+		Name : {%if user.first_name == ""%}
+				No Name Provided<br>
+			   {%else%}
+			   	{{user.first_name}} {{user.last_name}}<br>
+			   {%endif%}
+		Email : {%if user.email == ""%}
+				No Email Provided<br>
+			   {%else%}
+			   	{{user.email}}<br>
+			   {%endif%}
+		Is Superuser : {{user.is_superuser}}<br>
+		Is Staff : {{user.is_staff}}<br>
+		Is Active : {{user.is_active}}<br>
+		Date Joined : {{user.date_joined}}<br>
+		Last Login : {{user.last_login}} <br>
+	{% else %}
 		 <a href="{% url 'account_login' %}">Login</a> |
 		 <a href="{% url 'account_signup' %}">Signup</a>
-	{%endif%}
+	{% endif %}
 
 {% endblock %}

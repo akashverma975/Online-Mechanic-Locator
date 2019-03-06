@@ -18,7 +18,6 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
-ALLOWED_HOSTS = '*'
 
 # Application definition
 DJANGO_APPS = [
@@ -31,6 +30,7 @@ DJANGO_APPS = [
     'django.contrib.sites',  # new
 ]
 THIRD_PARTY = [
+    'django_extensions', # new
     'allauth',  # new
     'allauth.account',  # new
     'allauth.socialaccount',  # new
@@ -38,10 +38,7 @@ THIRD_PARTY = [
     'allauth.socialaccount.providers.facebook',  # new
 ]
 LOCAL_APPS = [
-    'onlinemechaniclocator.accounts',  # app for Custom User Model and handling Multiple User Authentication
-    'onlinemechaniclocator.owners',  # owner app
-    'onlinemechaniclocator.mechanics',  # mechanic app
-    'onlinemechaniclocator.garages',  # garage  app
+    'onlinemechaniclocator.accounts',  # app for Custom User Model 
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY + LOCAL_APPS
 
@@ -115,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -153,6 +150,7 @@ SITE_ID = 1
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = True
 ACCOUNT_AUTHENTICATION_METHOD = "username_email"
+# ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 
 # Facebook Authentication Settings
 SOCIALACCOUNT_PROVIDERS = {
@@ -174,7 +172,12 @@ SOCIALACCOUNT_PROVIDERS = {
             'gender',
             'updated_time',
         ],
-        # 'LOCALE_FUNC': 'path.to.callable',
         'VERSION': 'v2.12',
     }
+}
+
+# For building PNG and DOT file of current database
+GRAPH_MODELS = {
+    'all_applications': True,
+    'group_models': True,
 }
