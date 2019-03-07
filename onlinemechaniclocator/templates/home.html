@@ -1,34 +1,7 @@
 {% extends 'base.html' %}
 
-{% load socialaccount %}
-{% providers_media_js %}
-
-{% block title %}Home{% endblock %}
-
 {% block content %}
-	{%if user.is_authenticated%}
-		<p><a href="{% url 'account_logout' %}">Logout</a> | <a href="{% url 'account_change_password' %}">Change Password</a></p>
-		<hr>
-		Username : {{user.username}}<br>
-		Password : {{user.password}}<br>
-		Name : {%if user.first_name == ""%}
-				No Name Provided<br>
-			   {%else%}
-			   	{{user.first_name}} {{user.last_name}}<br>
-			   {%endif%}
-		Email : {%if user.email == ""%}
-				No Email Provided<br>
-			   {%else%}
-			   	{{user.email}}<br>
-			   {%endif%}
-		Is Superuser : {{user.is_superuser}}<br>
-		Is Staff : {{user.is_staff}}<br>
-		Is Active : {{user.is_active}}<br>
-		Date Joined : {{user.date_joined}}<br>
-		Last Login : {{user.last_login}} <br>
-	{% else %}
-		 <a href="{% url 'account_login' %}">Login</a> |
-		 <a href="{% url 'account_signup' %}">Signup</a>
-	{% endif %}
-
+  <h2>Homepage</h2>
+  <p>Welcome to Online Mechanic, {% if user.is_authenticated %}{{ user.username }}{% else %}visitor{% endif %}!</p>
+  
 {% endblock %}

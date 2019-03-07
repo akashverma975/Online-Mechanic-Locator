@@ -30,7 +30,7 @@ DJANGO_APPS = [
     'django.contrib.sites',  # new
 ]
 THIRD_PARTY = [
-    'django_extensions', # new
+    'crispy_forms',  # new
     'allauth',  # new
     'allauth.account',  # new
     'allauth.socialaccount',  # new
@@ -38,7 +38,7 @@ THIRD_PARTY = [
     'allauth.socialaccount.providers.facebook',  # new
 ]
 LOCAL_APPS = [
-    'onlinemechaniclocator.accounts',  # app for Custom User Model 
+    'onlinemechaniclocator.accounts',  # app for Custom User Model
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY + LOCAL_APPS
 
