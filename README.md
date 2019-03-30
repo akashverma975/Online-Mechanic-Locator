@@ -25,7 +25,7 @@ virtualenv [virtual_environment_name]
 ```
 6.  Now install all project dependencies from requirements.txt:
 ```bash
-pip install -r requirements.txt
+pip install -r requirements/local.txt
 ```
 7.  Overwrite **`.env.example`** with appropriate values and rename it to **`.env`**
 

@@ -1,7 +1,0 @@
-{% extends 'base.html' %}
-
-{% block content %}
-  <h2>Homepage</h2>
-  <p>Welcome to Online Mechanic, {% if user.is_authenticated %}{{ user.username }}{% else %}visitor{% endif %}!</p>
-  
-{% endblock %}
