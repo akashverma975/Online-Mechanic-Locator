@@ -45,3 +45,6 @@ INTERNAL_IPS = ['127.0.0.1']
 # ------------------------------------------------------------------------------
 # https://django-extensions.readthedocs.io/en/latest/installation_instructions.html#configuration
 INSTALLED_APPS += ['django_extensions']
+
+# For generating a image of database using Graph Model functionality of django-extension package
+GRAPH_MODELS = {}
